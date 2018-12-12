@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Guaranastock Marketplace - trabalhe conosco</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="icon" href="imagens/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+
+	<!--Validação campo formulário-->
+	<script type="text/javascript">
+		function validar() {
+		var nome = form1.nome.value;
+		var tel = form1.tel.value;
+		
+		if (nome.length < 5) {
+			alert('Preencha com seu nome completo');
+			form1.nome.focus();
+			return false;
+			}
+		if (tel.length < 8){
+			alert('Número de telefone inválido');
+			form1.tel.focus();
+			return false;
+			}	
+		}
+	</script>
+	<!--fim validação-->
+</head>
+<body>
+	<header>
+		<img class="logo" src="imagens/Logo-GuaranaStock.png" alt="Logo Guarana Stock">
+	</header>
+	<div class="container">	
+		<section class="form-trabalhe">
+			<h2>Trabalhe conosco</h2>
+			<form name="form1" method="post" action="trabalhe.php" enctype="multipart/form-data">
+				<fieldset>
+					<p><span>Envie-nos seu cadastro</span></p>
+					<label for="nome-completo">Nome Completo</label></br>		
+					<input type="text" name="nome" id="txtNome" required /></br>
+					<label for="email">Email</label></br>
+					<input type="email" name="email" id="txtEmail" required/></br>
+					<label for="data-nasc">Data de nascimento</label></br>
+					<input type="date" name="data" id="txtData" required/></br>
+					<label for="telefone">Telefone</label></br>
+					<input type="phone" name="tel" id="txtTel" required/></br>
+					<label for="endereco">Endereço</label></br>
+					<input type="text" name="endereco" id="txtEndereco" required/></br>
+					<label>Área de atuação</label>
+					<select name="select">
+						<option value="adm">Administrativo</option>
+						<option value="comercial">Comercial</option>
+						<option value="financeiro">Financeiro</option>
+						<option value="marketing">Marketing</option>
+						<option value="tecnologia">Tecnologia</option>
+					</select>
+					<input type="file" required name="arquivo" /></br>
+					<input type="submit" value="Enviar" onclick="return validar()" />
+				</fieldset>
+
+			</form>
+			<div class="outras-form">
+				<p><span>Entre em contato conosco</span></p>
+				<p>Telefone : (11) 998452886</p>
+				<p>Email: Atendimento@guaranastock.com</p>
+			</div>
+		</section>
+		
+	</div>
+	<footer>
+		<div class="container footer-align">
+			<ul class="footer-col1">
+				<li><span>Guaranastock.com</span></li></br>
+				<li><a href="http://www.guaranastock.com">Pagina Principal</a></li>
+	            <li><a href="http://www.guaranastock.com/home/About">Sobre</a></li>
+	            <li><a href="http://www.guaranastock.com/home/ContactUs">Contato</a></li>
+	            <li><a href="http://www.guaranastock.com/home/Subscribe">Planos e preços</a></li>
+	        </ul>
+	        <ul class="footer-col2">
+	            <li><span>Marketplace</span></li></br>
+	            <li><a href="http://www.guaranastock.com/Contributor">Venda suas fotos</a></li>
+	        </ul>
+	        <ul class="footer-col3">
+	        	<li><span>Conta</span></li></br>
+	        	<li><a href="http://www.guaranastock.com/Usuario/LoginRegister">Entrar/Cadastrar-se</a></li>
+	            <li><a href="http://www.guaranastock.com/Usuario/Profile">Minha conta</a></li>
+	        </ul>
+	        <ul class="footer-col4">
+	        	<li><span>Midias sociais</span></li></br>
+	            <li><a href="https://www.facebook.com/Guaranastockcom-1197360770370294/"><img src="imagens/facebook.png"></a><a href="https://www.instagram.com/guaranastock/?hl=pt-br"><img src="imagens/instagram.png"></a> <a href="https://twitter.com/guaranastock"><img src="imagens/twitter.png"></a></li>
+	        </ul>
+        </div>
+
+	</footer>
+</body>
+</html>
